@@ -1,0 +1,6 @@
+{
+  "_doc": "Optional. The editor auto-discovers *.json sheets via the manifest at <dir>/index.json or by parsing the directory listing. Default: ./spritesheets/ (relative to the editor folder). Override by setting spritesheetsDir to a single URL path, or spritesheetsDirs to a list tried in order.",
+  "spritesheetsDirs": [
+    "./spritesheets/"
+  ]
+}

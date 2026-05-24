@@ -1,0 +1,9 @@
+{
+  "name": "@ui-json/library",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Library half of ui-json — see root package.json for the public entry.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "ui-json",
+  "version": "0.1.0",
+  "description": "Tiny TypeScript runtime + browser-based authoring editor for JSON-described UI screens. Sprites resolved against easy-spritesheets.",
+  "type": "module",
+  "main": "./library/src/index.ts",
+  "types": "./library/src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./library/src/index.ts",
+      "default": "./library/src/index.ts"
+    }
+  },
+  "files": [
+    "library/src",
+    "library/README.md",
+    "editor",
+    "README.md"
+  ],
+  "scripts": {
+    "editor": "npx serve editor --symlinks --no-clipboard",
+    "editor:sync": "node editor/sync-sheets-index.mjs",
+    "test:library": "bun test library/src",
+    "test:editor": "bun editor/test-roundtrip.mjs"
+  },
+  "dependencies": {
+    "easy-spritesheets": "github:renanliberato/easy-spritesheets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renanliberato/ui-json.git"
+  },
+  "license": "MIT",
+  "author": "Renan Liberato"
+}

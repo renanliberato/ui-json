@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UI Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <button id="btn-new" class="btn" type="button">New</button>
+      <label class="btn">
+        Open JSON…
+        <input id="open-json" type="file" accept="application/json,.json" hidden />
+      </label>
+      <button id="btn-save" class="btn" type="button">Save JSON</button>
+
+      <span class="sep"></span>
+
+      <button id="btn-reload-sheets" class="btn" type="button">Reload sheets</button>
+      <label class="btn">
+        Load other folder…
+        <input id="add-folder" type="file" multiple webkitdirectory hidden />
+      </label>
+
+      <span class="sep"></span>
+
+      <label class="toggle">
+        <input id="snap-toggle" type="checkbox" checked />
+        Snap to pixel
+      </label>
+
+      <span class="sep"></span>
+
+      <span id="status-line" class="status">Initializing…</span>
+    </header>
+
+    <main class="workspace">
+      <aside class="panel panel-left">
+        <div class="panel-header">
+          <span>Hierarchy</span>
+          <button id="btn-add-node" class="btn small" type="button" title="Add empty div as child of selection">+</button>
+        </div>
+        <div id="tree" class="tree"></div>
+      </aside>
+
+      <section class="stage-wrap">
+        <div id="stage" class="stage">
+          <div id="stage-frame" class="stage-frame"></div>
+        </div>
+      </section>
+
+      <aside class="panel panel-right">
+        <div class="panel-header">
+          <span>Sprites</span>
+        </div>
+        <input id="library-search" class="search" type="search" placeholder="Search sprites…" />
+        <div id="library" class="library"></div>
+      </aside>
+    </main>
+
+    <footer id="properties" class="properties hidden">
+      <div class="prop">
+        <label>id</label>
+        <input id="props-id" type="text" />
+      </div>
+      <div class="prop">
+        <label>type</label>
+        <select id="props-type">
+          <option value="div">div</option>
+          <option value="button">button</option>
+        </select>
+      </div>
+      <div class="prop">
+        <label>x</label>
+        <input id="props-x" type="number" step="1" />
+      </div>
+      <div class="prop">
+        <label>y</label>
+        <input id="props-y" type="number" step="1" />
+      </div>
+      <div class="prop">
+        <label>w</label>
+        <input id="props-w" type="number" step="1" min="1" />
+      </div>
+      <div class="prop">
+        <label>h</label>
+        <input id="props-h" type="number" step="1" min="1" />
+      </div>
+      <div class="prop wide">
+        <label>sprite</label>
+        <span id="props-sprite" class="sprite-ref">—</span>
+        <button id="props-sprite-clear" class="btn small" type="button">Clear</button>
+      </div>
+    </footer>
+
+    <script type="module" src="./editor.js"></script>
+  </body>
+</html>

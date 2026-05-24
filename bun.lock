@@ -1,0 +1,15 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "ui-json",
+      "dependencies": {
+        "easy-spritesheets": "github:renanliberato/easy-spritesheets",
+      },
+    },
+  },
+  "packages": {
+    "easy-spritesheets": ["easy-spritesheets@github:renanliberato/easy-spritesheets#fb6f1fc", {}, "renanliberato-easy-spritesheets-fb6f1fc"],
+  }
+}
